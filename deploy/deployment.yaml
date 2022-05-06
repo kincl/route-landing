@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: route-landing
+  namespace: default
+  labels:
+    app: route-landing
+spec:
+  strategy:
+    type: Recreate
+  replicas: 1
+  selector:
+    matchLabels:
+      app: route-landing
+  template:
+    metadata:
+      labels:
+        app: route-landing
+    spec:
+      containers:
+        - name: route-landing
+          image: ghcr.io/kincl/route-landing:master
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              name: route-landing
