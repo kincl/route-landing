@@ -8,7 +8,9 @@ COPY go.sum ./
 RUN go mod download
 
 COPY *.go ./
-COPY assets ./
+COPY assets assets
+
+RUN ls -la
 
 RUN go build -o route-landing
 
