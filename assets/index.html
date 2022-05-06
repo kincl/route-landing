@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Homepage</title>
+      <link rel="stylesheet" type="text/css" href="/assets/index.css" />
+    </head>
+    <body>
+        {{- range $index, $route := . }}
+        {{- if mod $index 4 }}
+        {{- if ne $index 0 }}
+        </div>
+        {{- end }}
+        <div class="row">
+        {{- end }}
+
+        <div class="card">
+            <div class="card-header">{{.Name}}</div>
+            <div class="card-main">
+                <a href="https://{{.Spec.Host}}">
+                <img
+                class="icons" 
+                src="https://{{.Spec.Host}}/favicon.ico" 
+                onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8cGF0aCBkPSJtNTkyLjYgMjYzLjA5YzAuNzU3ODEtNy42MDU1LTMuMTg3NS0xNS4xOTUtMTAuNS0xOC42NDFsLTE5OC4xOC05My4zMjRjLTAuMjUzOTEtMC4xMTcxOS0wLjUxOTUzLTAuMTcxODgtMC43NzczNC0wLjI3MzQ0LTAuNjE3MTktMC4yNjE3Mi0xLjIzMDUtMC40NzI2Ni0xLjg3ODktMC42NjQwNi0wLjU1MDc4LTAuMTY0MDYtMS4wOTc3LTAuMzEyNS0xLjY2NDEtMC40MjE4OC0wLjU5NzY2LTAuMTE3MTktMS4yMDMxLTAuMTk5MjItMS44MjAzLTAuMjUzOTEtMC41OTM3NS0wLjA1ODU5NC0xLjE4MzYtMC4xMDU0Ny0xLjc3NzMtMC4xMDU0N3MtMS4xODM2IDAuMDQ2ODc1LTEuNzc3MyAwLjEwNTQ3Yy0wLjYxNzE5IDAuMDU4NTkzLTEuMjE4OCAwLjEzNjcyLTEuODI0MiAwLjI1MzkxLTAuNTU4NTkgMC4xMDU0Ny0xLjEwOTQgMC4yNTM5MS0xLjY2NDEgMC40MjE4OC0wLjY0NDUzIDAuMTk1MzEtMS4yNjU2IDAuNDAyMzQtMS44NzUgMC42NjQwNi0wLjI1MzkxIDAuMTA1NDctMC41MTk1MyAwLjE1NjI1LTAuNzc3MzQgMC4yNzM0NGwtMTk4LjE4IDkzLjMyOGMtNy4zMTI1IDMuNDQxNC0xMS4yNjIgMTEuMDM1LTEwLjUwNCAxOC42NDUtMC4wMzEyNSAwLjQyOTY5LTAuMTYwMTYgMC44NDM3NS0wLjE2MDE2IDEuMjc3M3YyMjQuNjhjMCA3LjE5OTIgNC4xNTIzIDEzLjc1IDEwLjY2NCAxNi44MDlsMTk4LjE4IDkzLjMyNGMwLjYwOTM4IDAuMjg1MTYgMS4yNSAwLjQyMTg4IDEuODc1IDAuNjQ0NTMgMC40Njg3NSAwLjE1MjM0IDAuOTE0MDYgMC4zMzk4NCAxLjM4MjggMC40Njg3NSAxLjUzOTEgMC40MDIzNCAzLjA5MzggMC42NjQwNiA0LjY2MDIgMC42NjQwNnMzLjEyMTEtMC4yNjE3MiA0LjY2MDItMC42NjQwNmMwLjQ2ODc1LTAuMTI1IDAuOTEwMTYtMC4zMTI1IDEuMzgyOC0wLjQ2ODc1IDAuNjI1LTAuMjIyNjYgMS4yNjU2LTAuMzU5MzggMS44NzUtMC42NDQ1M2wxOTguMTktOTMuMzI4YzYuNTExNy0zLjA1ODYgMTAuNjYtOS42MDk0IDEwLjY2LTE2LjgwOXYtMjI0LjY3YzAtMC40NDE0MS0wLjEzMjgxLTAuODQ3NjYtMC4xNjc5Ny0xLjI4NTJ6bS0yMTYuNiA3NC4wNzQtMTU3Ljg4LTc0LjM0OCAxNTcuODgtNzQuMzQ4IDE1Ny44OCA3NC4zNDh6bS0xNzkuNi00My41MDggMTYxLjAyIDc1LjgzNnYxODMuNmwtMTYxLjAyLTc1LjgyOHptMzU5LjIgMTgzLjYxLTE2MS4wMyA3NS44Mjh2LTE4My42MWwxNjEuMDMtNzUuODM2eiIvPgo8L3N2Zz4K'">
+                </a>
+                <div class="main-description"><a href="https://{{.Spec.Host}}">{{.Spec.Host}}</a></div>
+            </div>
+        </div>
+        {{- end }}
+        </div>
+    </body>
+</html>

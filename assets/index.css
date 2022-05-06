@@ -1,0 +1,70 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    min-height: 95vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+Flexbox cards
+
+https://github.com/bmorelli25/flexbox-card-tutorial
+https://codeburst.io/build-a-minimalist-html-card-in-just-53-lines-of-code-with-flexbox-b40801927eb5
+*/
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.card {
+    width: 200px;                 /* Set width of cards */
+    height: 120px;
+    display: flex;                /* Children use Flexbox */
+    flex-direction: column;       /* Rotate Axis */
+    border: 1px solid black;    /* Set up Border */
+    border-radius: 4px;           /* Slightly Curve edges */
+    overflow: hidden;             /* Fixes the corners */
+    margin: 5px;                  /* Add space between cards */
+}
+
+.card-header {
+    color: black;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+    background-color: grey;
+    padding: 5px 10px;
+}
+
+.card-main {
+    display: flex;              /* Children use Flexbox */
+    flex-direction: column;     /* Rotate Axis to Vertical */
+    justify-content: center;    /* Group Children in Center */
+    align-items: center;        /* Group Children in Center (on cross axis) */
+    padding: 15px 0;            /* Add padding to the top/bottom */
+}
+
+.icons {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 5px;
+    width: 48px;
+    height: 48px;
+}
+
+.main-description {
+    color: black;
+    font-size: 12px;
+    text-align: center;
+}
+
+a:link { color: blue; }
+a:visited { color: blue; }
+a:hover { color: blue; }
+a:active { color: blue; }
